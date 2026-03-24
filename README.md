@@ -1,8 +1,9 @@
 # 🛋️ NIRVAANA — Home Furnishing Studio 
 
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://ammarmultani03.github.io/nirvana-furnishing-website/)
-
 NIRVAANA is a high-end, responsive web application designed for a luxury home furnishing brand based in Surat, India. It goes beyond a simple storefront by offering a Real-time Sofa Configurator, a "White-Glove" service booking system, and a seamless, interactive shopping experience.
+
+🔗 Quick Links
+Live Website: [nirvana-furnishing-website.netlify.app](https://nirvana-furnishing-website.netlify.app/)
 
 ✨ Key Features
 Interative Sofa Studio: A custom-built configurator that allows users to adjust seater size, arm style, foam density, and leg finishes with live price calculation and SVG-based visual previews.
