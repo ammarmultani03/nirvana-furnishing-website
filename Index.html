@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIRVAANA — Home Furnishing Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- FESTIVE BANNER -->
+<div class="festive-banner" id="festiveBanner">
+  <span>🪔 Navratri Special — Up to 35% OFF on all mattresses & sofas</span>
+  <span>🎁 Free delivery + installation on orders above ₹5,000</span>
+  <button class="festive-close" onclick="document.getElementById('festiveBanner').style.display='none'" aria-label="Close">✕</button>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="logo">NIRV<span>AA</span>NA</a>
+  <ul class="nav-center">
+    <li><a href="#products">Products</a></li>
+    <li><a href="#configurator">Sofa Studio</a></li>
+    <li><a href="#features">Why Us</a></li>
+    <li><a href="#visit">Book Visit</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-track" id="themeToggle" aria-label="Toggle dark mode">
+      <div class="theme-thumb" id="themeThumb">☀️</div>
+    </button>
+    <button class="icon-btn" onclick="openCart()" aria-label="Cart">
+      🛒
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+    <button class="nav-cta" onclick="document.getElementById('visit').scrollIntoView({behavior:'smooth'})">Book Visit</button>
+  </div>
+  <button class="burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#products" onclick="closeMobile()">Products</a>
+  <a href="#configurator" onclick="closeMobile()">Sofa Studio</a>
+  <a href="#features" onclick="closeMobile()">Why Us</a>
+  <a href="#visit" onclick="closeMobile()">Book Visit</a>
+  <a href="#faq" onclick="closeMobile()">FAQ</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="hero-tag">Premium Home Furnishing Studio · Surat</div>
+    <h1 class="hero-headline">Where Comfort<br>Meets <em>Craftsmanship</em></h1>
+    <p class="hero-sub">From cloud-soft mattresses to hand-crafted sofas — transform every corner of your home with furnishings that last a lifetime.</p>
+    <div class="hero-btns">
+      <a href="#products" class="btn-primary">Explore Collection <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="#configurator" class="btn-outline">Configure Sofa</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-pattern"></div>
+    <div class="hero-illustration">
+      <svg class="hero-room" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="20" y="220" width="360" height="80" fill="rgba(255,255,255,0.08)" rx="2"/>
+        <rect x="20" y="30" width="360" height="195" fill="rgba(255,255,255,0.05)" rx="2"/>
+        <rect x="280" y="50" width="80" height="100" fill="rgba(255,255,255,0.15)" rx="4" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+        <line x1="320" y1="50" x2="320" y2="150" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+        <line x1="280" y1="100" x2="360" y2="100" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+        <path d="M275 48 Q260 80 265 155 L275 155 Q270 80 285 48Z" fill="rgba(255,255,255,0.2)"/>
+        <path d="M365 48 Q380 80 375 155 L365 155 Q370 80 355 48Z" fill="rgba(255,255,255,0.2)"/>
+        <rect x="40" y="165" width="200" height="60" fill="rgba(255,255,255,0.2)" rx="8"/>
+        <rect x="40" y="130" width="200" height="45" fill="rgba(255,255,255,0.25)" rx="8"/>
+        <rect x="28" y="140" width="22" height="50" fill="rgba(255,255,255,0.22)" rx="6"/>
+        <rect x="230" y="140" width="22" height="50" fill="rgba(255,255,255,0.22)" rx="6"/>
+        <rect x="50" y="165" width="85" height="55" fill="rgba(255,255,255,0.12)" rx="6" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+        <rect x="145" y="165" width="85" height="55" fill="rgba(255,255,255,0.12)" rx="6" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+        <rect x="50" y="220" width="12" height="10" fill="rgba(255,255,255,0.15)" rx="2"/>
+        <rect x="218" y="220" width="12" height="10" fill="rgba(255,255,255,0.15)" rx="2"/>
+        <ellipse cx="92" cy="162" rx="25" ry="16" fill="rgba(181,97,74,0.5)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+        <ellipse cx="188" cy="162" rx="25" ry="16" fill="rgba(92,61,46,0.5)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+        <rect x="255" y="190" width="40" height="6" fill="rgba(255,255,255,0.25)" rx="3"/>
+        <rect x="272" y="196" width="6" height="28" fill="rgba(255,255,255,0.15)" rx="2"/>
+        <polygon points="268,155 288,155 283,185 273,185" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+        <rect x="277" y="185" width="4" height="8" fill="rgba(255,255,255,0.2)"/>
+        <ellipse cx="279" cy="150" rx="20" ry="4" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+        <ellipse cx="140" cy="228" rx="100" ry="12" fill="rgba(181,97,74,0.2)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+        <ellipse cx="279" cy="170" rx="40" ry="30" fill="rgba(255,220,150,0.06)"/>
+        <circle cx="60" cy="80" r="3" fill="rgba(255,255,255,0.2)"><animate attributeName="cy" values="80;70;80" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.5;0.2" dur="3s" repeatCount="indefinite"/></circle>
+        <circle cx="100" cy="65" r="2" fill="rgba(255,255,255,0.15)"><animate attributeName="cy" values="65;55;65" dur="4s" repeatCount="indefinite"/></circle>
+        <circle cx="160" cy="75" r="2.5" fill="rgba(255,255,255,0.18)"><animate attributeName="cy" values="75;62;75" dur="3.5s" repeatCount="indefinite"/></circle>
+      </svg>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Products</div></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><div class="stat-num">15+</div><div class="stat-label">Yrs Trust</div></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><div class="stat-num">8K+</div><div class="stat-label">Happy Homes</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap"><div class="marquee-track" id="marqueeTrack"></div></div>
+
+<!-- TRUST BADGES -->
+<div class="trust-section reveal">
+  <div class="trust-grid">
+    <div class="trust-badge"><div class="trust-icon">🏆</div><div class="trust-text"><h4>ISO 9001 Certified</h4><p>Quality management systems verified internationally</p></div></div>
+    <div class="trust-badge"><div class="trust-icon">🚚</div><div class="trust-text"><h4>Free Delivery & Setup</h4><p>White-glove delivery across Surat & South Gujarat</p></div></div>
+    <div class="trust-badge"><div class="trust-icon">🛡️</div><div class="trust-text"><h4>5-Year Warranty</h4><p>Every mattress & sofa backed by our quality promise</p></div></div>
+    <div class="trust-badge"><div class="trust-icon">♻️</div><div class="trust-text"><h4>Eco-Friendly Materials</h4><p>Sustainably sourced cotton, natural foams & recycled fabrics</p></div></div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="products-section" id="products">
+  <div class="products-header">
+    <div>
+      <div class="section-label">Our Collection</div>
+      <h2 class="section-title">Crafted for <em>Every Room</em></h2>
+    </div>
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="sleep">Sleep</button>
+      <button class="filter-tab" data-filter="sofa">Sofa</button>
+      <button class="filter-tab" data-filter="decor">Décor</button>
+    </div>
+  </div>
+  <div class="products-grid" id="productsGrid"></div>
+</section>
+
+<!-- SOFA CONFIGURATOR -->
+<section class="configurator-section" id="configurator">
+  <div class="section-label">Sofa Studio</div>
+  <h2 class="section-title">Build Your <em>Dream Sofa</em></h2>
+  <p style="color:var(--light-text);font-size:0.9rem;margin-top:0.75rem;max-width:500px">Customise every detail — size, style, fabric, and finish. Get a live price estimate and place your order in minutes.</p>
+
+  <div class="config-grid">
+    <div class="config-panel">
+      <div class="config-group">
+        <h4>Seater Size</h4>
+        <div class="config-options" id="cfgSeater">
+          <button class="cfg-btn active" data-val="1-seater" data-price="12000">1 Seater</button>
+          <button class="cfg-btn" data-val="2-seater" data-price="20000">2 Seater</button>
+          <button class="cfg-btn" data-val="3-seater" data-price="28000">3 Seater</button>
+          <button class="cfg-btn" data-val="l-shape" data-price="42000">L-Shape</button>
+        </div>
+      </div>
+      <div class="config-group">
+        <h4>Arm Style</h4>
+        <div class="config-options" id="cfgArm">
+          <button class="cfg-btn active" data-val="rounded" data-price="0">Rounded</button>
+          <button class="cfg-btn" data-val="square" data-price="0">Square</button>
+          <button class="cfg-btn" data-val="no-arm" data-price="-1500">No Arms</button>
+          <button class="cfg-btn" data-val="scroll" data-price="2000">Scroll</button>
+        </div>
+      </div>
+      <div class="config-group">
+        <h4>Foam Density</h4>
+        <div class="config-options" id="cfgFoam">
+          <button class="cfg-btn active" data-val="standard" data-price="0">Standard</button>
+          <button class="cfg-btn" data-val="high-density" data-price="3000">High Density</button>
+          <button class="cfg-btn" data-val="ortho" data-price="5500">Orthopaedic</button>
+        </div>
+      </div>
+      <div class="config-group">
+        <h4>Leg Finish</h4>
+        <div class="config-options" id="cfgLeg">
+          <button class="cfg-btn active" data-val="walnut" data-price="0">Walnut Wood</button>
+          <button class="cfg-btn" data-val="steel" data-price="800">Steel Chrome</button>
+          <button class="cfg-btn" data-val="black" data-price="500">Matte Black</button>
+          <button class="cfg-btn" data-val="gold" data-price="1500">Brushed Gold</button>
+        </div>
+      </div>
+      <div class="config-group">
+        <h4>Fabric Colour</h4>
+        <div class="cfg-swatch-grid" id="cfgFabric">
+          <div class="cfg-swatch active" style="background:#C4A882" data-name="Camel" data-price="0"></div>
+          <div class="cfg-swatch" style="background:#5C3D2E" data-name="Bark Brown" data-price="0"></div>
+          <div class="cfg-swatch" style="background:#B5614A" data-name="Terracotta" data-price="0"></div>
+          <div class="cfg-swatch" style="background:#7A8C6E" data-name="Sage Green" data-price="500"></div>
+          <div class="cfg-swatch" style="background:#4A6580" data-name="Slate Blue" data-price="500"></div>
+          <div class="cfg-swatch" style="background:#2A1A10" data-name="Charcoal" data-price="0"></div>
+          <div class="cfg-swatch" style="background:#E8DCC8" data-name="Ivory" data-price="800"></div>
+          <div class="cfg-swatch" style="background:#8C6E5A" data-name="Mocha" data-price="0"></div>
+        </div>
+      </div>
+      <button class="config-cta" onclick="orderSofa()">Order This Sofa — <span id="cfgPriceBtn">₹12,000</span></button>
+    </div>
+
+    <div class="config-preview">
+      <div class="config-preview-title">Live Preview</div>
+      <svg class="sofa-preview-svg" id="sofaPreview" viewBox="0 0 340 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="30" y="120" width="280" height="70" rx="10" id="sp-body" fill="#C4A882"/>
+        <rect x="30" y="80" width="280" height="50" rx="10" id="sp-back" fill="#B8987A"/>
+        <rect x="10" y="90" width="30" height="65" rx="8" id="sp-arm-l" fill="#B8987A"/>
+        <rect x="300" y="90" width="30" height="65" rx="8" id="sp-arm-r" fill="#B8987A"/>
+        <rect x="55" y="120" width="95" height="65" rx="6" id="sp-c1" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+        <rect x="190" y="120" width="95" height="65" rx="6" id="sp-c2" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+        <rect x="60" y="188" width="16" height="18" rx="4" id="sp-leg-l" fill="#8B6914"/>
+        <rect x="264" y="188" width="16" height="18" rx="4" id="sp-leg-r" fill="#8B6914"/>
+        <ellipse cx="170" cy="210" rx="130" ry="8" fill="rgba(0,0,0,0.08)"/>
+      </svg>
+      <div class="config-summary" id="cfgSummary">
+        <div class="config-sum-row"><span>Size</span><span id="cs-size">1 Seater</span></div>
+        <div class="config-sum-row"><span>Arms</span><span id="cs-arm">Rounded</span></div>
+        <div class="config-sum-row"><span>Foam</span><span id="cs-foam">Standard</span></div>
+        <div class="config-sum-row"><span>Legs</span><span id="cs-leg">Walnut Wood</span></div>
+        <div class="config-sum-row"><span>Fabric</span><span id="cs-fabric">Camel</span></div>
+        <div class="config-sum-row" style="margin-top:0.5rem;padding-top:0.5rem;border-top:2px solid var(--border)"><span>Estimated Total</span><span class="config-total" id="cs-total">₹12,000</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section" id="features">
+  <div class="features-grid">
+    <div class="features-content">
+      <div class="section-label">Why Nirvaana</div>
+      <h2 class="section-title">Quality You <em>Feel</em><br>Every Day</h2>
+      <p class="features-text">We believe a well-furnished home changes how you live. Every product we craft is built with premium materials, skilled hands, and a commitment to comfort that endures.</p>
+      <ul class="features-list">
+        <li><div class="feature-icon">🏆</div><div class="feature-text"><h4>Premium Quality Materials</h4><p>Orthopedic-grade foams, 100% Egyptian cotton & hand-selected fabrics from trusted mills.</p></div></li>
+        <li><div class="feature-icon">🛠️</div><div class="feature-text"><h4>Custom Sofa Making</h4><p>Bespoke sofas crafted to your dimensions, fabric & style. Delivered and installed.</p></div></li>
+        <li><div class="feature-icon">🚚</div><div class="feature-text"><h4>Free Delivery & Setup</h4><p>We deliver, assemble, and ensure everything is perfect before we leave your home.</p></div></li>
+        <li><div class="feature-icon">♻️</div><div class="feature-text"><h4>5-Year Warranty</h4><p>Every mattress, sofa, and custom order comes with our comprehensive quality guarantee.</p></div></li>
+      </ul>
+    </div>
+    <div class="features-visual">
+      <div class="features-visual-inner">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:260px">
+          <rect x="40" y="200" width="240" height="18" rx="6" fill="rgba(196,168,130,0.4)" stroke="rgba(196,168,130,0.3)" stroke-width="1"/>
+          <rect x="40" y="178" width="240" height="26" rx="6" fill="rgba(181,97,74,0.35)" stroke="rgba(181,97,74,0.3)" stroke-width="1"/>
+          <rect x="40" y="154" width="240" height="28" rx="6" fill="rgba(196,168,130,0.3)" stroke="rgba(196,168,130,0.25)" stroke-width="1"/>
+          <rect x="60" y="124" width="90" height="35" rx="10" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+          <rect x="170" y="124" width="90" height="35" rx="10" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+          <rect x="60" y="218" width="14" height="25" rx="3" fill="rgba(196,168,130,0.25)"/>
+          <rect x="246" y="218" width="14" height="25" rx="3" fill="rgba(196,168,130,0.25)"/>
+          <text x="245" y="110" fill="rgba(255,255,255,0.3)" font-size="22" font-family="Cormorant Garamond,serif" font-style="italic"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/>z</text>
+          <text x="265" y="90" fill="rgba(255,255,255,0.2)" font-size="16" font-family="Cormorant Garamond,serif" font-style="italic"><animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" begin="0.5s" repeatCount="indefinite"/>z</text>
+          <circle cx="140" cy="70" r="2" fill="rgba(255,255,255,0.3)"><animate attributeName="r" values="2;3;2" dur="3s" repeatCount="indefinite"/></circle>
+          <circle cx="175" cy="55" r="1.5" fill="rgba(255,255,255,0.25)"><animate attributeName="r" values="1.5;2.5;1.5" dur="4s" repeatCount="indefinite"/></circle>
+          <circle cx="200" cy="75" r="2" fill="rgba(255,255,255,0.2)"><animate attributeName="r" values="2;3;2" dur="2.5s" repeatCount="indefinite"/></circle>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK HOME VISIT -->
+<section class="visit-section" id="visit">
+  <div class="section-label">Free Home Visit</div>
+  <h2 class="section-title">Let Us Come <em>To You</em></h2>
+  <p style="color:var(--light-text);font-size:0.9rem;margin-top:0.75rem;max-width:480px">Our furnishing experts visit your home, measure your space, and recommend the perfect products — completely free of charge.</p>
+  <div class="visit-grid">
+    <div class="visit-form-wrap">
+      <div class="visit-form">
+        <div class="form-row">
+          <div class="form-group"><label>Full Name</label><input class="form-input" type="text" placeholder="Your name" id="vName"/></div>
+          <div class="form-group"><label>Phone Number</label><input class="form-input" type="tel" placeholder="+91 98765 43210" id="vPhone"/></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Preferred Date</label><input class="form-input" type="date" id="vDate"/></div>
+          <div class="form-group"><label>Time Slot</label>
+            <select class="form-select" id="vTime">
+              <option value="">Select time</option>
+              <option>10:00 AM – 12:00 PM</option>
+              <option>12:00 PM – 2:00 PM</option>
+              <option>2:00 PM – 4:00 PM</option>
+              <option>4:00 PM – 6:00 PM</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group"><label>Area / Locality</label><input class="form-input" type="text" placeholder="Your locality in Surat" id="vArea"/></div>
+        <div class="form-group"><label>What are you looking for?</label>
+          <select class="form-select" id="vProduct">
+            <option value="">Select product category</option>
+            <option>Mattress</option>
+            <option>Sofa / Upholstery</option>
+            <option>Curtains & Fabrics</option>
+            <option>Bedsheets & Pillows</option>
+            <option>Multiple items</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Additional Notes</label><textarea class="form-textarea" placeholder="Any specific requirements or measurements..." id="vNotes"></textarea></div>
+        <button class="btn-primary" style="width:100%;justify-content:center" onclick="submitVisit()">Confirm Home Visit</button>
+      </div>
+    </div>
+    <div class="visit-info">
+      <div class="visit-info-item"><div class="visit-info-icon">📍</div><div class="visit-info-text"><h4>We Come to Your Home</h4><p>Our team visits across Surat, Navsari, Bharuch and surrounding areas at your convenience.</p></div></div>
+      <div class="visit-info-item"><div class="visit-info-icon">📐</div><div class="visit-info-text"><h4>Professional Measurement</h4><p>We measure your space and suggest the best-fit products — no guesswork, no returns.</p></div></div>
+      <div class="visit-info-item"><div class="visit-info-icon">🎨</div><div class="visit-info-text"><h4>Bring Fabric Samples</h4><p>Our expert brings 100+ fabric and colour swatches so you can see and feel before you buy.</p></div></div>
+      <div class="visit-info-item"><div class="visit-info-icon">💰</div><div class="visit-info-text"><h4>No Obligation, No Pressure</h4><p>Home visits are completely free. Order only when you are 100% satisfied with our recommendation.</p></div></div>
+      <div class="visit-info-item"><div class="visit-info-icon">⚡</div><div class="visit-info-text"><h4>Same-Week Slots Available</h4><p>Book today and get a visit within 2-3 working days. Emergency slots also available.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="faq-grid">
+    <div class="faq-sidebar">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Got <em>Questions?</em></h2>
+      <p>Everything you need to know about our products, delivery, and custom orders.</p>
+      <div class="faq-contact">
+        <div class="faq-contact-item">📞 +91 98765 43210</div>
+        <div class="faq-contact-item">✉️ hello@nirvaana.in</div>
+        <div class="faq-contact-item">🕐 Mon–Sat, 10am–7pm</div>
+      </div>
+    </div>
+    <div class="faq-list" id="faqList"></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section" id="testimonials">
+  <div class="testimonials-header">
+    <div class="section-label" style="justify-content:center">Customer Stories</div>
+    <h2 class="section-title">What Our <em>Customers Say</em></h2>
+  </div>
+  <div class="testimonials-grid" id="testimonialsGrid"></div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="cta-content">
+    <div class="cta-label">Let's Transform Your Home</div>
+    <h2 class="cta-title">Ready to Live in <em>Comfort?</em></h2>
+    <p class="cta-sub">Share your number and our furnishing experts will reach out with a personalised quote and free consultation.</p>
+    <div class="cta-form">
+      <input class="cta-input" type="tel" placeholder="Your phone number" id="phoneInput"/>
+      <button class="cta-btn" onclick="submitForm()">Call Me</button>
+    </div>
+    <div class="contact-info">
+      <div class="contact-item">📞 +91 98765 43210</div>
+      <div class="contact-item">✉️ hello@nirvaana.in</div>
+      <div class="contact-item">📍 Surat, Gujarat</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="logo">NIRV<span>AA</span>NA</a>
+      <p>Premium home furnishing studio crafting comfort for over 15 years. Every piece tells a story of quality.</p>
+    </div>
+    <div class="footer-col"><h5>Products</h5><ul><li><a href="#products">Foam Mattress</a></li><li><a href="#products">Cotton Mattress</a></li><li><a href="#products">Pillows</a></li><li><a href="#products">Bedsheets</a></li></ul></div>
+    <div class="footer-col"><h5>Services</h5><ul><li><a href="#configurator">Sofa Making</a></li><li><a href="#products">Sofa Cloth</a></li><li><a href="#products">Curtains</a></li><li><a href="#visit">Home Visit</a></li></ul></div>
+    <div class="footer-col"><h5>Company</h5><ul><li><a href="#">About Us</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li><li><a href="#">Warranty</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Nirvaana Home Furnishings, Surat. All rights reserved.</span>
+    <div class="social-links">
+      <a href="#" class="social-link" aria-label="Instagram">IG</a>
+      <a href="#" class="social-link" aria-label="Facebook">FB</a>
+      <a href="#" class="social-link" aria-label="WhatsApp">WA</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/919876543210?text=Hi!%20I%20am%20interested%20in%20your%20furnishing%20products." class="wa-btn" target="_blank" aria-label="WhatsApp">
+  <span>💬</span>
+  <span class="wa-tooltip">Chat on WhatsApp</span>
+</a>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="close-btn" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total"><span class="cart-total-label">Total</span><span class="cart-total-price" id="cartTotal">₹0</span></div>
+    <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+  </div>
+</div>
+
+<!-- QUICK VIEW MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modal">
+    <div class="modal-img" id="modalImg">
+      <button class="modal-close" onclick="closeModalBtn()">✕</button>
+    </div>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"><span id="toastIcon">🛒</span><span id="toastMsg">Added!</span></div>
+
+<script src="script.js"></script>
+</body>
+</html>
