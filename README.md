@@ -31,9 +31,9 @@ Animations: Intersection Observer API for scroll-triggered animations and CSS Ke
 Clone the repository:
 
 Bash
-git clone https://github.com/your-username/nirvaana-furnishings.git
+git clone https://github.com/ammarmultani03/nirvaana-furnishings.git
 Open the project:
-Simply open furnishing-shop-v2.html in any modern web browser. No build steps or dependencies required!
+Simply open index.html in any modern web browser. No build steps or dependencies required!
 
 📂 Project Structure
 index.html - The core structure and layout.
