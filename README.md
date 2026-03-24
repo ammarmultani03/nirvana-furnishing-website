@@ -1,4 +1,7 @@
-🛋️ NIRVAANA — Home Furnishing Studio
+# 🛋️ NIRVAANA — Home Furnishing Studio 
+
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://ammarmultani03.github.io/nirvana-furnishing-website/)
+
 NIRVAANA is a high-end, responsive web application designed for a luxury home furnishing brand based in Surat, India. It goes beyond a simple storefront by offering a Real-time Sofa Configurator, a "White-Glove" service booking system, and a seamless, interactive shopping experience.
 
 ✨ Key Features
